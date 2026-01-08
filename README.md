@@ -5,20 +5,22 @@ This project demonstrates a **complete end-to-end SQL workflow** on an ecommerce
 
 
 ## Folder Structure
+
 ecommerce-sales-sql-analysis/
-├── data/ # Raw dataset / SQL dump
-│ └── ecommerce_sales.sql
-├── sql/ # SQL scripts following workflow steps
-│ ├── 01_schema.sql
-│ ├── 02_data_load.sql
-│ ├── 03_data_validation.sql
-│ ├── 04_basic_analysis.sql
-│ ├── 05_advanced_analysis.sql
-│ └── 06_business_insights.sql
-├── results/ # Analysis results and insights
-│ └── insights.md
+├── data/                           # Raw dataset / SQL dump
+│   └── ecommerce_sales.sql
+├── sql/                            # SQL scripts following workflow steps
+│   ├── 01_schema.sql
+│   ├── 02_data_load.sql
+│   ├── 03_data_validation.sql
+│   ├── 04_basic_analysis.sql
+│   ├── 05_advanced_analysis.sql
+│   └── 06_business_insights.sql
+├── results/                       # Analysis results and insights
+│   └── insights.md
 ├── README.md
 └── LICENSE
+
 
 
 ## Dataset Description
