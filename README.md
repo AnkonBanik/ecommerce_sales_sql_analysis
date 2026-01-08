@@ -21,6 +21,53 @@ ecommerce-sales-sql-analysis/
 └── LICENSE
 
 
+## Dataset Description
+The dataset contains **ecommerce sales transactions** with the following key columns:
+
+| Column Name       | Data Type | Description                          |
+|------------------|-----------|--------------------------------------|
+| order_id          | INT       | Unique ID for each order             |
+| order_date        | DATE      | Date of the order                     |
+| customer_id       | INT       | Unique ID for each customer           |
+| customer_name     | VARCHAR   | Name of the customer                  |
+| customer_location | VARCHAR   | City/Region of the customer           |
+| product_id        | INT       | Unique ID for each product            |
+| product_name      | VARCHAR   | Name of the product                   |
+| category          | VARCHAR   | Product category                       |
+| quantity          | INT       | Number of units sold                  |
+| price             | DECIMAL   | Price per unit                         |
+| total_amount      | DECIMAL   | Total order value (quantity * price) |
+
+> Note: This is a **sample dataset**, enough to demonstrate SQL workflow, analysis, and business insights.
+
+## ERD (Entity-Relationship Diagram)
+
+Below is the visual representation of the database structure:
+
++------------------+           +------------------+
+|    Customers     |           |    Products      |
++------------------+           +------------------+
+| customer_id (PK) |<--------->| product_id (PK)  |
+| name             |           | name             |
+| location         |           | category         |
++------------------+           | price            |
+                               +------------------+
+                                      ^
+                                      |
+                                      |
+                               +------------------+
+                               |     Orders       |
+                               +------------------+
+                               | order_id (PK)    |
+                               | order_date       |
+                               | customer_id (FK) |
+                               | product_id (FK)  |
+                               | quantity         |
+                               | total_amount     |
+                               +------------------+
+
+> **PK** = Primary Key, **FK** = Foreign Key
+
 
 ## Project Workflow
 1. **Schema Design:** Define tables, data types, constraints (`01_schema.sql`)  
